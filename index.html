@@ -40,12 +40,13 @@
     </table>
     <script defer>
         const tdArr = document.querySelectorAll[".td"];
-        window.onload => () {
-            let tdArr[0] = prompt("Enter Name of", "Player1");
-            let tdArr[1] = prompt("Enter Name of", "Player2");
-            let tdArr[2] = prompt("Enter Name of", "Player3");
-            let tdArr[3] = prompt("Enter Name of", "Player4");
-            document.querySelector("table").childNodes.style.visibility = "none";
+        window.onload = () => {
+            tdArr[0].innerText = prompt("Enter Name of", "Player1");
+            tdArr[1].innerText = prompt("Enter Name of", "Player2");
+            tdArr[2].innerText = prompt("Enter Name of", "Player3");
+            tdArr[3].innerText = prompt("Enter Name of", "Player4");
+            const tableChildren = document.querySelector("table").childNodes;
+            tableChildren.style.visibility = "none";
         }
     </script>
 </body>
