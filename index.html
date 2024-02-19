@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chor-Police</title>
     <style>
+/*         table, table * {
+            visiblity: none;
+        } */
         .div {
             width: 1.5em;
             height: 1.5em;
             background-color: #fff;
-            font-size: ;
+            font-size: 1em;
+            font-weight: 400;
+            font-family: manjari, ubuntu, "Comic Sans", Perpetua, Monaco, sans-serif;
         }
     </style>
 </head>
@@ -40,6 +45,7 @@
             let tdArr[1] = prompt("Enter Name of", "Player2");
             let tdArr[2] = prompt("Enter Name of", "Player3");
             let tdArr[3] = prompt("Enter Name of", "Player4");
+            document.querySelector("table").childNodes.style.visibility = "none";
         }
     </script>
 </body>
