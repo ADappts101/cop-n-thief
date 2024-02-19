@@ -8,13 +8,19 @@
 /*         table, table * {
             visiblity: none;
         } */
-        .div {
+        td.td {
+
+        }
+
+        div.paper {
             width: 1.5em;
             height: 1.5em;
-            background-color: #fff;
+            background-color: lightgrey;
+            border: 5px solid darkgrey;
+            border-radius: 15px;
             font-size: 1em;
             font-weight: 400;
-            font-family: manjari, ubuntu, "Comic Sans", Perpetua, Monaco, sans-serif;
+            font-family: Manjari, ubuntu, "Comic Sans", Perpetua, Monaco, sans-serif;
         }
     </style>
 </head>
@@ -39,15 +45,22 @@
         <div class="paper"></div>
     </table>
     <script defer>
-        const tdArr = document.querySelectorAll[".td"];
+        const tdArr = document.querySelectorAll(".td");
         window.onload = () => {
             tdArr[0].innerText = prompt("Enter Name of", "Player1");
             tdArr[1].innerText = prompt("Enter Name of", "Player2");
             tdArr[2].innerText = prompt("Enter Name of", "Player3");
             tdArr[3].innerText = prompt("Enter Name of", "Player4");
+            
             const tableChildren = document.querySelector("table").childNodes;
-            tableChildren.style.visibility = "none";
+            for (const child of tableChildren) {
+                if (child.nodeType === 1) { // Check if it's an element node
+                    child.style.visibility = "hidden";
+                }
+            }
+
         }
     </script>
+    
 </body>
 </html>
