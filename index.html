@@ -8,19 +8,33 @@
 /*         table, table * {
             visiblity: none;
         } */
+        * {
+            position: grid;
+        }
+        
         td.td {
-
+            width: 1.5em;
+            height: 1.5em;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: 400;
+            font-family: Optima, manjari, ubuntu, "Comic Sans", Perpetua, Monaco, sans-serif;
+            border: 1px solid #000; /* Add this line for border */
         }
 
         div.paper {
-            width: 1.5em;
-            height: 1.5em;
+            width: 5em;
+            height: 5em;
             background-color: lightgrey;
             border: 5px solid darkgrey;
             border-radius: 15px;
             font-size: 1em;
             font-weight: 400;
             font-family: Manjari, ubuntu, "Comic Sans", Perpetua, Monaco, sans-serif;
+        }
+
+        button.end {
+            background-color: #f33;
         }
     </style>
 </head>
@@ -47,18 +61,31 @@
     <script defer>
         const tdArr = document.querySelectorAll(".td");
         window.onload = () => {
-            tdArr[0].innerText = prompt("Enter Name of Player1:", "Player1");
-            tdArr[1].innerText = prompt("Enter Name of Player2:", "Player2");
-            tdArr[2].innerText = prompt("Enter Name of Player3:", "Player3");
-            tdArr[3].innerText = prompt("Enter Name of Player4:", "Player4");
-            
-            const tableChildren = document.querySelector("table").childNodes;
-            for (const child of tableChildren) {
-                if (child.nodeType === 1) { // Check if it's an element node
-                    child.style.visibility = "hidden";
+            tdArr[0].innerText = prompt("Enter Name of", "Player1");
+            tdArr[1].innerText = prompt("Enter Name of", "Player2");
+            tdArr[2].innerText = prompt("Enter Name of", "Player3");
+            tdArr[3].innerText = prompt("Enter Name of", "Player4");
+    
+            // Hide elements after 2 seconds (2000 milliseconds)
+            setTimeout(() => {
+                const tableChildren = document.querySelector("table").childNodes;
+                for (const child of tableChildren) {
+                    if (child.nodeType === 1) { // Check if it's an element node
+                        child.style.visibility = "hidden";
+                    }
                 }
-            }
+                
+                // Show elements after another 2 seconds
+                setTimeout(() => {
+                    for (const child of tableChildren) {
+                        if (child.nodeType === 1) { // Check if it's an element node
+                            child.style.visibility = "visible";
+                        }
+                    }
+                }, 2000);
+            }, 2000);
 
+            const papers = 
         }
     </script>
     
