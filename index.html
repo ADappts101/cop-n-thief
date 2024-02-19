@@ -47,10 +47,10 @@
     <script defer>
         const tdArr = document.querySelectorAll(".td");
         window.onload = () => {
-            tdArr[0].innerText = prompt("Enter Name of", "Player1");
-            tdArr[1].innerText = prompt("Enter Name of", "Player2");
-            tdArr[2].innerText = prompt("Enter Name of", "Player3");
-            tdArr[3].innerText = prompt("Enter Name of", "Player4");
+            tdArr[0].innerText = prompt("Enter Name of Player1:", "Player1");
+            tdArr[1].innerText = prompt("Enter Name of Player2:", "Player2");
+            tdArr[2].innerText = prompt("Enter Name of Player3:", "Player3");
+            tdArr[3].innerText = prompt("Enter Name of Player4:", "Player4");
             
             const tableChildren = document.querySelector("table").childNodes;
             for (const child of tableChildren) {
